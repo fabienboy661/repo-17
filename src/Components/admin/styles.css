@@ -1,0 +1,70 @@
+:root{
+  --PrimaryColor : hsl(199, 100%, 33%);
+  --SecondaryColor : hsl(187, 85%, 43%);
+  --grandientColor : linear-gradient(to right, hsl(187,
+   85%, 43%), hsl(199, 100%, 33%));
+   --whiteColor : hsl(0, 0%, 100%);
+   --blackColor : hsl(201, 33%, 16%);
+   --textColor : hsl(240, 4%, 36%);
+   --whiteColorDeam : hsl(0, 0%, 93%);
+   --greyText : rgb(199, 190, 190);
+   --inputColor : rgb(239, 239, 239);
+   --bodyColor : rgb(240, 240, 246);
+   --cardBG : rgb(225, 225, 235);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .App {
+    font-family: sans-serif;
+    width: 100%;
+    min-height: 100vh;
+  }
+  
+  .App .navbar {
+    width: 100%;
+    min-height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #fff;
+    background: rgba(29, 161, 242, 1);
+  }
+  
+  .App .navbar .nav-links {
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+  }
+  
+  .App .navbar .nav-links>a{
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .Button{
+    background-color: red;
+  }
+
+  .containte{
+    justify-content: center;
+  }
+  .valide {
+    padding-top: 1px;
+    padding-left: 10px;
+    max-width: 970px;
+    height: 30px;
+    background-color:#B3F4FE;
+ }
+ .retour {
+    float:right;
+  }
+  body{
+    background: var(--blackColor);
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+  }
+  
