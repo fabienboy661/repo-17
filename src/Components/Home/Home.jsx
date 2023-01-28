@@ -19,8 +19,8 @@ const Home = () => {
   return (
     <section id='menu'>
 
-        <h2 data-aos="fade-right">ENI TANAMBAO FIANARANTSOA</h2>
-        <h4 data-aos="fade-left">ENI HOA MILAY</h4>
+        <h2 data-aos="fade-right">ENI TANAMBAO</h2>
+        <h4 data-aos="fade-left">ENI</h4>
         <p data-aos="fade-up">Nous vous offrons des services fiable et rapide avec des equipes specialisees </p>
         <p data-aos="fade-up">et des materieles de luxe</p>
         <Link to="/forms" data-aos="fade-up" className='btn-reservation'>Reserver Maintenant</Link>
