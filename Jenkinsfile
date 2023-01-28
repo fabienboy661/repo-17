@@ -1,8 +1,8 @@
 pipeline {
     agent any 
         tools {
-            node 'NodeJS'
-        }
+            maven 'NodeJS'
+    }
 
     environment {
 		PROJECT_ID = 'faby-375009'
