@@ -173,7 +173,6 @@ return (
            {loginError ? <p className='error'><BiError />Mot de passe/Nom d'utilisateur incorrect<BiError /></p> : ""}
           </Modal.Footer>
     </Modal>
-    <ToastContainer />
   </ul>
 
     <div onClick={removeNavBar} className="closeNavbar">
