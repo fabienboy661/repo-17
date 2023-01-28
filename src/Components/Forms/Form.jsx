@@ -14,7 +14,6 @@ import {MdOutlineClass} from 'react-icons/md'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import Aos from 'aos'
 import 'aos/dist/aos.css'
-import axios from 'axios'
 
 const Forms = () => {
    //react hook, scrol animation
@@ -56,21 +55,6 @@ const preventMinus = (e) => {
   }
 };
 
-  const handleForm = (e) => {
-    e.preventDefault();
-      axios.post(
-        "http://127.0.0.1:8000/create_reservation", 
-        {
-          email: emailRef.current.value,
-          destination: destinationRef.current.value,
-          classe: classeRef.current.value,
-          nombre: nombreRef.current.value,
-          name: nameRef.current.value,
-          date: dateRef.current.value,
-        },
-      )
-  };
-   
 
   return (
     <>

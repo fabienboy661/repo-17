@@ -1,7 +1,6 @@
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
-import axios from 'axios';
 
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -45,44 +44,6 @@ const Navbar = () => {
         setActive('navBar')
     }
 
-    const [username, setUsername] = useState('');
-    const [password, setPassword] = useState('');
-
-    const [loginError, setLoginError] = useState(false);
-
-    const userRef = useRef();
-    const passwordRef = useRef();
-
-    const login = (e) => {
-      e.preventDefault();
-      const usernameError = document.querySelector('.username.error');
-      const passwordError = document.querySelector('.password.error');
-
-      let data = new FormData()
-      data.append("username", userRef.current.value);
-      data.append("password", passwordRef.current.value);
-
-      axios
-        .post("http://127.0.0.1:8000/login", data)
-        .then((res) => {
-          console.log(res);
-          if(res.data.errors){
-            usernameError.innerHTML = res.data.errors.username
-            passwordError.innerHTML = res.data.errors.password
-          } else {
-            window.location = "dashboard/reservation"
-          }
-          
-      }).catch((err) => {
-        setLoginError(true)
-        setTimeout(() => {
-          setLoginError(false)
-        }, 2000)
-        console.log(err);
-      });
-      
-    };
-
 return (
 
 <section className='navBarSection'>
@@ -125,7 +86,7 @@ return (
 
         <Modal.Body>
 
-          <Form action="" onSubmit={login} id="sign-In-form">
+          <Form action="" id="sign-In-form">
                 <Form.Group className="mb-3">
                 <Form.Label htmlFor='username'>Nom d'utilisateur</Form.Label>
                 <br />
@@ -133,10 +94,10 @@ return (
                     name='username'
                     id='username'
                     onChange={(e) => setUsername(e.target.value)}
-                    value={username}
+                   
                     type="text"
                     placeholder="username"
-                    ref={userRef}
+                    
                     required
                     autoFocus
                   />
@@ -148,10 +109,10 @@ return (
                     name='password'
                     id='password'
                     onChange={(e) => setPassword(e.target.value)}
-                    value={password}
+                    
                     type="password"
                     placeholder="password"
-                    ref={passwordRef}
+                    
                     required
                     autoFocus
                   />
@@ -170,7 +131,7 @@ return (
         </Modal.Body>
            <Modal.Footer>
             <br />
-           {loginError ? <p className='error'><BiError />Mot de passe/Nom d'utilisateur incorrect<BiError /></p> : ""}
+        
           </Modal.Footer>
     </Modal>
   </ul>
