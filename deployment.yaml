@@ -24,5 +24,5 @@ spec:
           value: "3000"
         resources:
           limits:
-            cpu: "0.1"
-            memory: "64Mi"
+            cpu: "1"
+            memory: "2"
