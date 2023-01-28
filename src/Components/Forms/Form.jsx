@@ -1,4 +1,4 @@
-import React, {useEffect, useState, useRef} from 'react'
+import React, {useEffect} from 'react'
 import './form.css'
 import img from '../../Assets/img.jpg'
 import {ImLocation} from 'react-icons/im'
@@ -25,20 +25,6 @@ const Forms = () => {
     window.location.reload(false);
   }
 
-  //recuperation des donnees
-  const [email, setEmail] = useState('');
-  const [destination, setDestination] = useState('');
-  const [classe, setClasse] = useState('');
-  const [nombre, setNumber] = useState('');
-  const [name, setName] = useState('');
-  const [date, setDate] = useState('');
-
-  const emailRef = useRef();
-  const destinationRef = useRef();
-  const classeRef = useRef();
-  const nombreRef = useRef();
-  const nameRef = useRef();
-  const dateRef = useRef();
 
   const preventPasteNegative = (e) => {
     const clipboardData = e.clipboardData || window.Clipboard;
@@ -58,8 +44,7 @@ const preventMinus = (e) => {
 
   return (
     <>
-    <form className='home' action="" onSubmit={handleForm}
-    id="form"
+    <form className='home' action="" id="form"
     >
     <div className="overlay"></div>
      <img src={img} type="image/jpg" alt="" />
@@ -86,11 +71,10 @@ const preventMinus = (e) => {
                 <input
                   name='email'
                   id='email'
-                  onChange={(e) => setEmail(e.target.value)}
-                  value={email}
+                 
                   type="email"
                   placeholder='@gmail.com'
-                  ref={emailRef}
+                  
                   required
                   autoFocus
                 />
@@ -103,12 +87,9 @@ const preventMinus = (e) => {
                 <input
                   name='destination'
                   id='destination'
-                  onChange={(e) => setDestination(e.target.value)}
-                  value={destination}
                   type="text"
                   maxLength={15}
                   placeholder='Où allez-vous ?'
-                  ref={destinationRef}
                   autoFocus
                   required
                   className="option">
@@ -126,9 +107,8 @@ const preventMinus = (e) => {
                   placeholder='Votre nom complet'
                   name='name'
                   id='name'
-                  onChange={(e) => setName(e.target.value.replace(/[^a-z ]/gi, ''))}
-                  value={name}
-                  ref={nameRef}
+                  
+                  
                   required
                   autoFocus
                   />
@@ -142,15 +122,14 @@ const preventMinus = (e) => {
                 <input
                   name='nombre'
                   id='nombre'
-                  onChange={(e) => setNumber(e.target.value)}
-                  value={nombre}
+                  
                   type="number"
                   min="1"
                   max={10}
                   step={1}
                   onPaste={preventPasteNegative}
                   onKeyPress={preventMinus}
-                  ref={nombreRef}
+                  
                   required
                   autoFocus
                   />
@@ -165,9 +144,8 @@ const preventMinus = (e) => {
                   type='date' 
                   name='date'
                   id='date'
-                  onChange={(e) => setDate(e.target.value)}
-                  value={date}
-                  ref={dateRef}
+                  
+                  
                   required
                   autoFocus
                   />
@@ -179,11 +157,10 @@ const preventMinus = (e) => {
                 <select
                   name='classe'
                   id='classe'
-                  onChange={(e) => setClasse(e.target.value)}
-                  value={classe}
+                  
                   type="classe"
                   placeholder='classe'
-                  ref={classeRef}
+                  
                   required
                   autoFocus  
                   className="option">
