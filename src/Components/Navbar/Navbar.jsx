@@ -4,7 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 import 'react-toastify/dist/ReactToastify.css';
 
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 import './navbar.css'
 
 import { Link} from "react-router-dom";
@@ -12,7 +12,7 @@ import { Link} from "react-router-dom";
 import {SiYourtraveldottv} from 'react-icons/si'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import {TbDotsCircleHorizontal} from 'react-icons/tb'
-import {BiError} from 'react-icons/bi'
+
 import {SiGnuprivacyguard} from 'react-icons/si'
 
 
