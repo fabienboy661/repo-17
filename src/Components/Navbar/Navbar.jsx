@@ -93,7 +93,7 @@ return (
                   <Form.Control
                     name='username'
                     id='username'
-                    onChange={(e) => setUsername(e.target.value)}
+                    
                    
                     type="text"
                     placeholder="username"
@@ -108,7 +108,6 @@ return (
                 <Form.Control
                     name='password'
                     id='password'
-                    onChange={(e) => setPassword(e.target.value)}
                     
                     type="password"
                     placeholder="password"
