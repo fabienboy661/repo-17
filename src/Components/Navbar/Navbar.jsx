@@ -2,13 +2,8 @@ import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 import axios from 'axios';
-import { ToastContainer, toast } from 'react-toastify';
+
 import 'react-toastify/dist/ReactToastify.css';
-//import SignUpForm from '../Log/SignUpForm';
-//import SignInForm from '../Log/SignInForm';
-//import Box from '@mui/material/Box';
-//import TextField from '@mui/material/TextField';
-//import AccountCircle from '@mui/icons-material/AccountCircle';
 
 import React, {useState, useRef} from 'react'
 import './navbar.css'
@@ -57,20 +52,6 @@ const Navbar = () => {
 
     const userRef = useRef();
     const passwordRef = useRef();
-
-    const register = (e) => {
-      e.preventDefault();
-      axios.post(
-        "http://127.0.0.1:8000/register", {
-          username: userRef.current.value,
-          password: passwordRef.current.value,
-        }
-      ).then((res) => {
-        console.log(res.data)
-      }).catch((err) => {
-        console.log(err)
-      })
-    };
 
     const login = (e) => {
       e.preventDefault();
