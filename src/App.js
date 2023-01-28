@@ -10,8 +10,6 @@ import Footer from './Components/Footer/Footer'
 import Footer1 from './Components/footer1/Footer1';
 import Form from './Components/Forms/Form'
 
-import ScrollToTop from './ScrollToTop'
-
 const NavRoute = ({exact, path, component: Component}) => (
   <Route exact={exact} path={path} render={(props) => (
     <div>
@@ -24,13 +22,11 @@ const App = () => {
   return (  
   <>
     <Router>
-      <ScrollToTop />
       <Switch>
         <NavRoute path='/' exact component={Home} />
         <NavRoute path='/main' exact component={Main} />
         <NavRoute path='/forms' exact component={Form} />
         <NavRoute path='/footer' exact component={Footer} />
-        
       </Switch>
     </Router>
     <Footer1 />

@@ -25,6 +25,12 @@ pipeline {
             }
         }
 
+        stage('Test') {
+            steps {
+                sh 'npm run test'
+            }
+        }
+
         stage('Build Docker Image') {
 		    steps {
 			    sh 'whoami'
@@ -33,12 +39,6 @@ pipeline {
 			    }
 		    }
 	    }
-
-        stage('Test') {
-            steps {
-                sh 'npm run test'
-            }
-        }
 	
 	    stage("Push Docker Image") {
 		    steps {
