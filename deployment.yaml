@@ -16,12 +16,12 @@ spec:
       - name: react-app
         image: fabien123/react-app:tagversion
         ports:
-        - containerPort: 8080
+        - containerPort: 3000
         env:
         - name: NODE_ENV
           value: "production"
         - name: PORT
-          value: "80"
+          value: "3000"
         resources:
           limits:
             cpu: "0.1"

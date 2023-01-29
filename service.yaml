@@ -1,36 +1,12 @@
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
- name: react-deployment-loadbalancer
- labels:
-  app: react-app-loadbalancer
-spec:
- replicas: 1
- selector:
-  matchLabels:
-   app: react-app-loadbalancer
- template:
-  metadata: 
-   labels:
-    app: react-app-loadbalancer
-  spec:
-   containers:
-   - name: react-app-loadbalancer
-     image: fabien123/react-app:tagversion
-     ports:
-     - containerPort: 8080
-
----
 apiVersion: v1
 kind: Service
 metadata:
-  name: react-service-loadbalancer
+  name: react-app-service
 spec:
-  type: LoadBalancer
   selector:
-    app: react-app-loadbalancer
+    app: react-app
   ports:
-    - protocol: TCP
+    - name: http
       port: 80
-      targetPort: 8080
+      targetPort: 3000
+  type: LoadBalancer
