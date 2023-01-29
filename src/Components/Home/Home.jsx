@@ -20,7 +20,7 @@ const Home = () => {
     <section id='menu'>
 
         <h2 data-aos="fade-right">Madagascar Tiako</h2>
-        <h4 data-aos="fade-left">Hiezaka aho ka tst maintsy ho tafita</h4>
+        <h4 data-aos="fade-left">ELIA BEBEKO TIAKO</h4>
         <p data-aos="fade-up">Nous vous offrons des services fiable et rapide avec des equipes specialisees </p>
         <p data-aos="fade-up">et des materieles de luxe</p>
         <Link to="/forms" data-aos="fade-up" className='btn-reservation'>Reserver Maintenant</Link>
