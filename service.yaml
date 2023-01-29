@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: react-app-loadbalancer
-     image: fabien123/jenkins_project:tagversion
+     image: fabien123/react-app:tagversion
      ports:
      - containerPort: 8080
 
