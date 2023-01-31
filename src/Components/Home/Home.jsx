@@ -18,8 +18,8 @@ const Home = () => {
 
   return (
     <section id='menu'>
-        <h2 data-aos="fade-right">Page web a jour</h2>
-        <h4 data-aos="fade-left">Modification Effectue</h4>
+        <h2 data-aos="fade-right">Bienvenue</h2>
+        <h4 data-aos="fade-left">Site de Voyage a Madagascar</h4>
         <p data-aos="fade-up">Nous vous offrons des services fiable et rapide avec des equipes specialisees </p>
         <p data-aos="fade-up">et des materieles de luxe</p>
         <Link to="/forms" data-aos="fade-up" className='btn-reservation'>Reserver Maintenant</Link>
